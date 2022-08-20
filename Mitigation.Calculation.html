@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+  body {
+  background-color: lightblue;
+}
+p.solid {
+border-style: solid;
+border-color: green;
+width: 200px;
+font size: 35px;
+}
+.BackGround-Box{
+  background-color: lightseagreen;
+}
+.Box-Green {
+  border-bottom-color: black;
+  background-color: darkgreen;
+  color: white;
+  border: 5px solid lightseagreen;
+  color: white;
+  text-align: center;
+}
+.Footer-Box-Green {
+  background-color: darkgreen;
+  color: white;
+  border: 5px solid lightseagreen;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.BackGround-Box {
+  width: auto;
+  height: auto;
+  border: 6px solid black;
+  display: table;
+  padding: 10px;
+}
+ </style>
+</head>
+<head>
+ <div class='Box-Green'>
+                                                        Tools
+ </div>
+</head>
+
+
+<body>
+ <div class='BackGround-Box'>
+  <p> Resistance + Fortify Calculator <p> <p class='solid' id='total' >%</p>
+  <input type='number' id='baseNumber' value='...'>Armor Resist</br> 
+  <input type='number' id='modifierNumber' value='...'>Fortify </br>
+  <button onclick='total()'>Calculate</button>
+ </div>
+</body>
+<script>
+function total() {
+var A = document.getElementById("baseNumber").value;
+var B = document.getElementById("modifierNumber").value;
+  basestep3();
+}
+function step1(a, b) {
+  return Math.abs(a - b);
+}
+function step2(a, b) {
+  return Math.abs(a * b);
+}
+function step3(a, b) {
+  return Math.abs(a + b);
+}
+function basestep3() {
+  var A = document.getElementById("baseNumber").value;
+  var B = document.getElementById("modifierNumber").value;
+  var x = step1(1, A/100);
+  var y = step2(x, B/100);
+  var z = step3(A/100, y);
+document.getElementById("total").innerHTML = z*100 + '%' + ' Total Damage Reduction';
+}
+</script>
+</html>
