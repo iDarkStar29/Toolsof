@@ -5,31 +5,23 @@
   body {
   background-color: lightblue;
 }
-p.solid {
-border-style: solid;
-border-color: green;
-width: 200px;
-font size: 35px;
+.solid {
+  border-style: solid;
+  border-color: green;
+  width: 200px;
+  height: 100px;
 }
 .BackGround-Box{
   background-color: lightseagreen;
 }
 .Box-Green {
-  border-bottom-color: black;
+  border-style: dotted;
+  border-color: whitesmoke;
+  border-width: 10px;
   background-color: darkgreen;
   color: white;
   border: 5px solid lightseagreen;
-  color: white;
   text-align: center;
-}
-.Footer-Box-Green {
-  background-color: darkgreen;
-  color: white;
-  border: 5px solid lightseagreen;
-  color: white;
-  text-align: center;
-  padding: 0;
-  margin: 0;
 }
 .BackGround-Box {
   width: auto;
@@ -40,21 +32,27 @@ font size: 35px;
 }
  </style>
 </head>
-<head>
- <div class='Box-Green'>
+<div style="border-style: solid; border-color: black; border-width: 5px;">
+ <head>
+  <div class='Box-Green'>
                                                         Tools
- </div>
-</head>
+  </div>
+ </head>
 
-
-<body>
- <div class='BackGround-Box'>
-  <p> Resistance + Fortify Calculator <p> <p class='solid' id='total' >%</p>
-  <input type='number' id='baseNumber' value='...'>Armor Resist</br> 
-  <input type='number' id='modifierNumber' value='...'>Fortify </br>
-  <button onclick='total()'>Calculate</button>
- </div>
-</body>
+ <div class='Box-Green'
+  <body>
+   <div class='BackGround-Box'>
+    <p> Resistance + Fortify Calculator <p>
+    <p class='Box-Green' id='total'></p>
+    <input type='number' id='baseNumber' value='...'>Armor Resist</br> 
+    <input type='number' id='modifierNumber' value='...'>Fortify </br>
+    <button onclick='total()'>Calculate</button>
+   </div>
+  </body>
+ <footer class='Box-Green'>
+                                                           TOOLS BABY
+ </footer>
+</div>
 <script>
 function total() {
 var A = document.getElementById("baseNumber").value;
