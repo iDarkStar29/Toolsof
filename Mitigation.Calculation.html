@@ -5,23 +5,12 @@
   body {
   background-color: lightblue;
 }
-.solid {
-  border-style: solid;
-  border-color: green;
-  width: 200px;
-  height: 100px;
-}
-.BackGround-Box{
-  background-color: lightseagreen;
-}
 .Box-Green {
-  border-style: dotted;
-  border-color: whitesmoke;
-  border-width: 10px;
   background-color: darkgreen;
   color: white;
-  border: 5px solid lightseagreen;
+  border: 3px solid lightseagreen;
   text-align: center;
+  outline: solid black 5px
   }
 .Box-Green-left {
   border-style: dotted;
@@ -33,6 +22,7 @@
   text-align: left;
 }
 .BackGround-Box {
+  background-color: lightseagreen;
   width: auto;
   height: auto;
   border: 6px solid black;
@@ -41,26 +31,32 @@
 }
  </style>
 </head>
-<div style="border-style: solid; border-color: black; border-width: 5px;">
+<div style=
+"border-style: solid; border-color: black; border-width: 5px;">
  <head>
   <div class='Box-Green'>
                                                         Tools
+  </div>
  </head>
-</div>
- <div class='Box-Green-left'>
-  <body>
-   <div class='BackGround-Box'>
-    <p> Resistance + Fortify Calculator <p>
-    <p class='Box-Green' id='total'></p>
-    <input type='number' id='baseNumber' value='...'>Armor Resist</br> 
-    <input type='number' id='modifierNumber' value='...'>Fortify </br>
-    <button onclick='total()'>Calculate</button>
-   </div>
+ 
+ 
+<div class='Box-Green-left'>
+<body>
+ <div class='BackGround-Box' style='margin: 10px'>
+  <p style='text-align: center; border: solid 5px black; background-color: darkgreen'> Resistance + Fortify Calculator </p>
+  <p class='Box-Green' id='total' style='border: none; padding-bottom: 4px; height: 15px; text-align: left'>Total Damage Reduction = </p>
+   <input type='number' id='baseNumber' value='...'>Armor Resist</br> 
+   <input type='number' id='modifierNumber' value='...'>Fortify </br>
+   <button onclick='total()'>Calculate</button>
+  </div>
   </body>
- <footer class='Box-Green'>
+ </div>
+    
+   <div class='Box-Green'>
+ <footer>
                                                            TOOLS BABY
  </footer>
-</div>
+ <div>
 <script>
 function total() {
 var A = document.getElementById("baseNumber").value;
@@ -82,7 +78,7 @@ function basestep3() {
   var x = step1(1, A/100);
   var y = step2(x, B/100);
   var z = step3(A/100, y);
-document.getElementById("total").innerHTML = z*100 + '%' + ' Total Damage Reduction';
+document.getElementById("total").innerHTML = 'Total Damage Reduction = ' + z*100 + '%';
 }
 </script>
 </html>
