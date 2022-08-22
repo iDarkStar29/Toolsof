@@ -33,194 +33,202 @@ td {
                                   Crafting Tool For Armor
 </h2>
 
-<table>
+<p id='select1' style='text-align: center; background-color: lightgreen; border: solid 3px black'>
+First Perk Selected </p>
+<p id='select2' style='text-align: center; background-color: lightgreen; border: solid 3px black'>
+Second Perk Selected </p>
+<p id='select3' style='text-align: center; background-color: lightgreen; border: solid 3px black'>
+Third Perk Selected </p>
+
+
+<table id='table1' style='background-color: lightgreen'>
   <tr>
-    <th style='width: 20px'> Click Box to Select</th>
+    <th style='width: 20px'> Click Box to Select Perk</th>
     <th>Perk</th>
     <th>Effect</th>
     <th class='percent' style='width: 30px'>Craft %</th>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk1'>Sturdy Energy.</td>
     <td id='perk1Effect' style='text-align: left; padding-left: 5px'>
 When blocking a hit while below 30% stamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)</td>
-    <td id='perk1%' value='...'>%</td>
+    <td id='perk1%' value='...'>14.49%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk2'>Resilient</td>
     <td id='perk2Effect'style='text-align: left; padding-left: 5px'>
 Critical hits deal 4.8% less damage to you.</td>
-    <td id='perk2%' value='...'>%</td>
+    <td id='perk2%' value='...'>14.49%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk3'>Freedom</td>
     <td id='perk3Effect'style='text-align: left; padding-left: 5px'>
 Slow, Stun, and Root expires 10% faster.</td>
-    <td id='perk3%' value='...'>%</td>
+    <td id='perk3%' value='...'>4.83%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk4'>Vigor</td>
     <td id='perk4Effect'style='text-align: left; padding-left: 5px'>
 Burn, Bleed, and Poison expires 10% faster.</td>
-    <td id='perk4%' value='...'>%</td>
+    <td id='perk4%' value='...'>4.83%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk5'>Invigorated</td>
     <td id='perk5Effect'style='text-align: left; padding-left: 5px'>
 Weaken, Disease, Exhaust, and Rend expires 10% faster.</td>
-    <td id='perk5%' value='...'>%</td>
+    <td id='perk5%' value='...'>4.83%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk6'>Refreshing</td>
     <td id='perk6Effect'style='text-align: left; padding-left: 5px'>
 Reduces max cooldowns by 2.8%.</td>
-    <td id='perk6%' value='...'>%</td>
+    <td id='perk6%' value='...'>4.83%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk7'>Refreshing Ward</td>
     <td id='perk7Effect'style='text-align: left; padding-left: 5px'>
 Reduces active cooldowns by 1.9% after being hit 4 times. Does not trigger off persistent damage, DoT effects or blocked attacks.</td>
-    <td id='perk7%' value='...'>%</td>
+    <td id='perk7%' value='...'>4.83%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk8'>Refreshing Evasion</td>
     <td id='perk8Effect'style='text-align: left; padding-left: 5px'>
 Reduces active cooldowns by 0.74% after exiting the dodge animation.</td>
-    <td id='perk8%' value='...'>%</td>
+    <td id='perk8%' value='...'>4.83%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk9'>Indestructible</td>
     <td id='perk9Effect'style='text-align: left; padding-left: 5px'>
 This item no longer loses durability.</td>
-    <td id='perk9%' value='...'>%</td>
+    <td id='perk9%' value='...'>4.35%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk10'>Luck</td>
     <td id='perk10Effect'style='text-align: left; padding-left: 5px'>
 +2.8% chance at rare items from chests and monsters.</td>
-    <td id='perk10%' value='...'>%</td>
+    <td id='perk10%' value='...'>3.62%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk11'>Physical Aversion</td>
     <td id='perk11Effect'style='text-align: left; padding-left: 5px'>
 You take 3.8% less damage from ranged physical attacks.</td>
-    <td id='perk11%' value='...'>%</td>
+    <td id='perk11%' value='...'>2.3%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk12'>Elemental Aversion</td>
     <td id='perk12Effect'style='text-align: left; padding-left: 5px'>
 You take 3.8% less damage from ranged elemental attacks.</td>
-    <td id='perk12%' value='...'>%</td>
+    <td id='perk12%' value='...'>2.3%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk13'>Shirking Fortification</td>
     <td id='perk13Effect'style='text-align: left; padding-left: 5px'>
 Dodging through an enemy attack grants fortify, increasing damage absorption by 3.8% for 6s. Each armor piece with this perk increases the potency of the effect.</td>
-    <td id='perk13%' value='...'>%</td>
+    <td id='perk13%' value='...'>2.3%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk14'>Ancient Ward</td>
     <td id='perk14Effect'style='text-align: left; padding-left: 5px'>
 +4.8% Damage Absorption against Ancient Guardians.</td>
-    <td id='perk14% value='...''>%</td>
+    <td id='perk14% value='...''>1.84%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk15'>Angry Earth Ward</td>
     <td id='perk15Effect'style='text-align: left; padding-left: 5px'>
 +4.8% Damage Absorption against Angry Earth.</td>
-    <td id='perk15%' value='...'>%</td>
+    <td id='perk15%' value='...'>1.84%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk16'>Corrupted Ward</td>
     <td id='perk16Effect'style='text-align: left; padding-left: 5px'>
 +4.8% Damage Absorption against Corrupted.</td>
-    <td id='perk16%' value='...'>%</td>
+    <td id='perk16%' value='...'>1.84%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk17'>Lost Ward</td>
     <td id='perk17Effect'style='text-align: left; padding-left: 5px'>
 +4.8% Damage Absorption against Lost.</td>
-    <td id='perk17%' value='...'>%</td>
+    <td id='perk17%' value='...'>1.84%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk18'>Corruption Resistance</td>
     <td id='perk18Effect'style='text-align: left; padding-left: 5px'>
 +15 Corruption Resistance. Also slows corruption damage.</td>
-    <td id='perk18%' value='...'>%</td>
+    <td id='perk18%' value='...'>1.45%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk19'>Blight Resistance</td>
     <td id='perk19Effect'style='text-align: left; padding-left: 5px'>
 +15 Blight Resistance. Also slows blight damage.</td>
-    <td id='perk19%' value='...'>%</td>
+    <td id='perk19%' value='...'>1.45%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk20'>Sword n Shield Skill Perks</td>
     <td id='perk20Effect'style='text-align: left; padding-left: 5px'>
 SnS Skill Perks have a Higher chance to roll because it is technically 2 weapons</td>
-    <td id='perk20%' value='...'>%</td>
+    <td id='perk20%' value='...'>.23%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk20'>Beast Ward</td>
     <td id='perk20Effect'style='text-align: left; padding-left: 5px'>
 +4.8% Damage Absorption against Beasts.</td>
-    <td id='perk20%' value='...'>%</td>
+    <td id='perk20%' value='...'>.23%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk20'>Skill Perks</td>
     <td id='perk20Effect'style='text-align: left; padding-left: 5px'>
 Every other Weapon Skill Perk without SnS</td>
-    <td id='perk20%' value='...'>%</td>
+    <td id='perk20%' value='...'>.21%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk21'>Logging Luck</td>
     <td id='perk21Effect'style='text-align: left; padding-left: 5px'>
 While Logging gain 5% chance at finding rare items.</td>
-    <td id='perk21%' value='...'>%</td>
+    <td id='perk21%' value='...'>.04%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk22'>Harvesting Luck</td>
     <td id='perk22Effect'style='text-align: left; padding-left: 5px'>
 While Harvesting gain 5% chance at finding rare items.</td>
-    <td id='perk22%' value='...'>%</td>
+    <td id='perk22%' value='...'>.04%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk23'>Mining Luck</td>
     <td id='perk23Effect'style='text-align: left; padding-left: 5px'>
 While Mining gain 5% chance at finding rare items.</td>
-    <td id='perk23%' value='...'>%</td>
+    <td id='perk23%' value='...'>.04%</td>
   </tr>
   <tr>
-    <td> <button> Select </button>
+    <td style='background-color: black'> <button> Select </button>
     <td id='perk24'>Skinning Luck</td>
     <td id='perk24Effect'style='text-align: left; padding-left: 5px'>
 While Skinning gain 5% chance at finding rare items.</td>
-    <td id='perk24%' value='...'>%</td>
+    <td id='perk24%' value='...'>.04%</td>
   </tr>
 </table>
 
