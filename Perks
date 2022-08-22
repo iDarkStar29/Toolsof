@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+ <style>
 h2 {
   text-align: center;
 }
@@ -25,7 +25,7 @@ td {
   text-align: center;
 }
 
-</style>
+ </style>
 </head>
 <body>
 
@@ -33,7 +33,7 @@ td {
                                   Crafting Tool For Armor
 </h2>
 
-<p id='select1' style='text-align: center; background-color: lightgreen; border: solid 3px black'>
+<p id='selectOne' style='text-align: center; background-color: lightgreen; border: solid 3px black'>
 First Perk Selected </p>
 <p id='select2' style='text-align: center; background-color: lightgreen; border: solid 3px black'>
 Second Perk Selected </p>
@@ -49,14 +49,14 @@ Third Perk Selected </p>
     <th class='percent' style='width: 30px'>Craft %</th>
   </tr>
   <tr>
-    <td style='background-color: black'> <button> Select </button>
+    <td style='background-color: black'> <button onclick='remove1()'> Select </button>
     <td id='perk1'>Sturdy Energy.</td>
     <td id='perk1Effect' style='text-align: left; padding-left: 5px'>
 When blocking a hit while below 30% stamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)</td>
     <td id='perk1%' value='...'>14.49%</td>
   </tr>
   <tr>
-    <td style='background-color: black'> <button> Select </button>
+    <td style='background-color: black'> <button onclick='removeTwo()'> Select </button>
     <td id='perk2'>Resilient</td>
     <td id='perk2Effect'style='text-align: left; padding-left: 5px'>
 Critical hits deal 4.8% less damage to you.</td>
@@ -230,10 +230,10 @@ While Mining gain 5% chance at finding rare items.</td>
 While Skinning gain 5% chance at finding rare items.</td>
     <td id='perk24%' value='...'>.04%</td>
   </tr>
-</table>
+ </table>
 
-<footer style='text-align: center'>
+ <footer style='text-align: center'>
 THE HEADACHE COMMENCES
-</footer>
+ </footer>
 </body>
 </html>
