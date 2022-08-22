@@ -1,1 +1,174 @@
- id='perk12%'
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+h2 {
+  text-align: center;
+}
+body {
+  background-color: lightblue;
+}
+table, th, td {
+  border: 1px solid;
+}
+table {
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+th {
+  width: 200px;
+  height: 40px;
+  }
+td {
+  height: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>
+                                  Crafting Tool For Armor
+</h2>
+
+<table>
+  <tr>
+    <th>Perk</th>
+    <th>Effect</th>
+    <th class='percent' style='width: 20px'>Craft %</th>
+  </tr>
+  <tr>
+    <td id='perk1'>Sturdy Energy.</td>
+    <td id='perk1Effect'>When blocking a hit while below 30% stamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)</td>
+    <td id='perk1%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk2'>Resilient</td>
+    <td id='perk2Effect'>perk2 Effect</td>
+    <td id='perk2%' value='...'>%</td>
+  </tr> <tr>
+    <td id='perk3'>Freedom</td>
+    <td id='perk3Effect'>Perk3 Effect</td>
+    <td id='perk3%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk4'>Vigor</td>
+    <td id='perk4Effect'>perk4 Effect</td>
+    <td id='perk4%' value='...'>%</td>
+  </tr> <tr>
+    <td id='perk5'>Invigorated</td>
+    <td id='perk5Effect'>Perk5 Effect</td>
+    <td id='perk5%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk6'>Refreshing</td>
+    <td id='perk6Effect'>perk6 Effect</td>
+    <td id='perk6%' value='...'>%</td>
+  </tr> <tr>
+    <td id='perk7'>Refreshing Ward</td>
+    <td id='perk7Effect'>Perk7 Effect</td>
+    <td id='perk7%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk8'>Refreshing Evasion</td>
+    <td id='perk8Effect'>perk8 Effect</td>
+    <td id='perk8%' value='...'>%</td>
+  </tr> <tr>
+    <td id='perk9'>Indestructible</td>
+    <td id='perk9Effect'>Perk9 Effect</td>
+    <td id='perk9%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk10'>Luck</td>
+    <td id='perk10Effect'>perk10 Effect</td>
+    <td id='perk10%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk11'>Physical Aversion</td>
+    <td id='perk11Effect'>Perk11 Effect</td>
+    <td id='perk11%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk12'>Elemental Aversion</td>
+    <td id='perk12Effect'>perk12 Effect</td>
+    <td id='perk12%' value='...'>%</td>
+  </tr>
+    <tr>
+    <td id='perk13'>Shirking Fortification</td>
+    <td id='perk13Effect'>perk10 Effect</td>
+    <td id='perk13%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk14'>Ancient Ward</td>
+    <td id='perk14Effect'>Perk11 Effect</td>
+    <td id='perk14% value='...''>%</td>
+  </tr>
+  <tr>
+    <td id='perk15'>Angry Earth Ward</td>
+    <td id='perk15Effect'>perk12 Effect</td>
+    <td id='perk15%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk16'>Corrupted Ward</td>
+    <td id='perk16Effect'>perk10 Effect</td>
+    <td id='perk16%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk17'>Lost Ward</td>
+    <td id='perk17Effect'>Perk11 Effect</td>
+    <td id='perk17%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk18'>Corruption Resistance</td>
+    <td id='perk18Effect'>perk12 Effect</td>
+    <td id='perk18%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk19'>Blight Resistance</td>
+    <td id='perk19Effect'>perk10 Effect</td>
+    <td id='perk19%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk20'>Sword n Shield Skill Perks</td>
+    <td id='perk20Effect'>Perk11 Effect</td>
+    <td id='perk20%' value='...'>%</td>
+  </tr>
+    <tr>
+    <td id='perk20'>Beast Ward</td>
+    <td id='perk20Effect'>Perk11 Effect</td>
+    <td id='perk20%' value='...'>%</td>
+  </tr>
+    <tr>
+    <td id='perk20'>Skill Perks</td>
+    <td id='perk20Effect'>Perk11 Effect</td>
+    <td id='perk20%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk21'>Logging Luck</td>
+    <td id='perk21Effect'>perk12 Effect</td>
+    <td id='perk21%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk22'>Harvesting Luck</td>
+    <td id='perk22Effect'>perk10 Effect</td>
+    <td id='perk22%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk23'>Mining Luck</td>
+    <td id='perk23Effect'>Perk11 Effect</td>
+    <td id='perk23%' value='...'>%</td>
+  </tr>
+  <tr>
+    <td id='perk24'>Skinning Luck</td>
+    <td id='perk24Effect'>perk12 Effect</td>
+    <td id='perk24%' value='...'>%</td>
+  </tr>
+</table>
+
+<footer style='text-align: center'>
+THE HEADACHE COMMENCES
+</footer>
+</body>
+</html>
+
