@@ -55,10 +55,10 @@ Third Perk Selected </p>
     <th class='percent' style='width: 40px'>Craft %</th>
   </tr>
   <tr>
-    <td style='background-color: black'> <button onclick='remove()'>Select</button>
-    <td id='perkOne' value='...'></td>
+    <td style='background-color: black'> <button onclick='removeOne(0)'>Select</button>
+    <td id='perkOne'></td>
     <td id='perkOneEffect' style='text-align: left; padding-left: 5px'></td>
-    <td id='perkOnePercent' value='...'></td>
+    <td id='perkOnePercent'></td>
   </tr>
   <tr>
     <td style='background-color: black'> <button type='button' onclick='removeTwo()'> Select </button>
@@ -80,7 +80,7 @@ Third Perk Selected </p>
   </tr>
   <tr>
     <td style='background-color: black'> <button> Select </button>
-    <td id='perkFive'></td>
+    <td id='perkFive'>Invigorated</td>
     <td id='perkFiveEffect'style='text-align: left; padding-left: 5px'></td>
     <td id='perkFivePercent' value='...'></td>
   </tr>
@@ -92,7 +92,7 @@ Third Perk Selected </p>
   </tr>
   <tr>
     <td style='background-color: black'> <button> Select </button>
-    <td id='perkSeven' value='...'></td>
+    <td id='perkSeven'></td>
     <td id='perkSevenEffect'style='text-align: left; padding-left: 5px'></td>
     <td id='perkSevenPercent' value='...'></td>
   </tr>
@@ -158,7 +158,7 @@ Third Perk Selected </p>
   </tr>
   <tr>
     <td style='background-color: black'> <button> Select </button>
-    <td id='perkEighteen'><td>
+    <td id='perkEighteen'></td>
     <td id='perkEighteenEffect'style='text-align: left; padding-left: 5px'></td>
     <td id='perkEighteenPercent' value='...'></td>
   </tr>
@@ -200,7 +200,7 @@ Third Perk Selected </p>
   </tr>
   <tr>
     <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwentyFive'>/td>
+    <td id='perkTwentyFive'></td>
     <td id='perkTwentyFiveEffect'style='text-align: left; padding-left: 5px'></td>
     <td id='perkTwentyFivePercent' value='...'></td>
   </tr>
@@ -270,11 +270,19 @@ const perkEffect = [
 'While Skinning gain 5% chance at finding rare items.',
 ];
 
-
 const perkPercent = [
-14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .23, .21, .04, .04, .04, .04
+14.49, 14.49, 
+4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 
+4.35, 
+3.62, 
+2.3, 2.3, 2.3, 
+1.84, 1.84, 1.84, 1.84, 
+1.45, 1.45, 
+.23, .23, 
+.21, 
+.04, .04, .04, .04
 ];
-
+//perkName var
 var a = perkName[0];
 var b = perkName[1];
 var c = perkName[2];
