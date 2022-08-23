@@ -50,34 +50,34 @@ Third Perk Selected </p>
 <table id='table1' style='background-color: lightgreen; padding: 5px'>
   <tr>
     <th style='width: 20px'> Click Box to Select Perk</th>
-    <th>Perk</th>
+    <th style='width: 100px'>Perk</th>
     <th>Effect</th>
-    <th class='percent' style='width: 30px'>Craft %</th>
+    <th class='percent' style='width: 40px'>Craft %</th>
   </tr>
   <tr>
-    <td style='background-color: black'> <button onclick='removeOne()'> Select </button>
-    <td id='perkOne'>Sturdy Energy.</td>
+    <td style='background-color: black'> <button onclick='removeOne(0)'>Select</button>
+    <td id='perkOne'></td>
     <td id='perkOneEffect' style='text-align: left; padding-left: 5px'>
-When blocking a hit while below 30% stamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)</td>
+When blocking a hit while below tamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)</td>
     <td id='perkOnePercent'>14.49%</td>
   </tr>
   <tr>
-    <td style='background-color: black'> <button onclick='removeTwo()'> Select </button>
-    <td id='perkTwo'>Resilient</td>
+    <td style='background-color: black'> <button type='button' onclick='removeTwo()'> Select </button>
+    <td id='perkTwo'></td>
     <td id='perkTwoEffect'style='text-align: left; padding-left: 5px'>
 Critical hits deal 4.8% less damage to you.</td>
     <td id='perkTwoPercent' value='...'>14.49%</td>
   </tr>
   <tr>
     <td style='background-color: black'> <button> Select </button>
-    <td id='perkThree'>Freedom</td>
+    <td id='perkThree'></td>
     <td id='perkThreeEffect'style='text-align: left; padding-left: 5px'>
 Slow, Stun, and Root expires 10% faster.</td>
     <td id='perkThreePercent' value='...'>4.83%</td>
   </tr>
   <tr>
     <td style='background-color: black'> <button> Select </button>
-    <td id='perkFour'>Vigor</td>
+    <td id='perkFour'></td>
     <td id='perkFourEffect'style='text-align: left; padding-left: 5px'>
 Burn, Bleed, and Poison expires 10% faster.</td>
     <td id='perkFourPercent' value='...'>4.83%</td>
@@ -238,7 +238,6 @@ While Skinning gain 5% chance at finding rare items.</td>
   </tr>
  </table>
 <script>
-
 const perkName = [
 'Sturdy Energy',
 'Resilient',
@@ -298,9 +297,9 @@ const perkEffect = [
 ];
 
 const perkPercent = [
-14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .21, .04, .04, .04, .04
+14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .23, .21, .04, .04, .04, .04
 ];
-
+//perkName var
 var a = perkName[0];
 var b = perkName[1];
 var c = perkName[2];
@@ -327,7 +326,7 @@ var w = perkName[22];
 var x = perkName[23];
 var y = perkName[24];
 var z = perkName[25];
-
+//perkEffect var
 var aa = perkEffect[0];
 var bb = perkEffect[1];
 var cc = perkEffect[2];
@@ -354,7 +353,7 @@ var ww = perkEffect[22];
 var xx = perkEffect[23];
 var yy = perkEffect[24];
 var zz = perkEffect[25];
-
+//perkPercent var
 var aaa = perkPercent[0];
 var bbb = perkPercent[1];
 var ccc = perkPercent[2];
@@ -381,7 +380,7 @@ var www = perkPercent[22];
 var xxx = perkPercent[23];
 var yyy = perkPercent[24];
 var zzz = perkPercent[25];
-
+//perkName
 document.getElementById('perkOne').innerHTML = a;
 document.getElementById('perkTwo').innerHTML = b;
 document.getElementById('perkThree').innerHTML = c;
@@ -408,7 +407,7 @@ document.getElementById('perkTwentyThree').innerHTML = w;
 document.getElementById('perkTwentyFour').innerHTML = x;
 document.getElementById('perkTwentyFive').innerHTML = y;
 document.getElementById('perkTwentySix').innerHTML = z;
-
+//perkEffect
 document.getElementById('perkOneEffect').innerHTML = aa;
 document.getElementById('perkTwoEffect').innerHTML = bb;
 document.getElementById('perkThreeEffect').innerHTML = cc;
@@ -435,7 +434,7 @@ document.getElementById('perkTwentyThreeEffect').innerHTML = ww;
 document.getElementById('perkTwentyFourEffect').innerHTML = xx;
 document.getElementById('perkTwentyFiveEffect').innerHTML = yy;
 document.getElementById('perkTwentySixEffect').innerHTML = zz;
-
+//perkPercent
 document.getElementById('perkOnePercent').innerHTML = aaa;
 document.getElementById('perkTwoPercent').innerHTML = bbb;
 document.getElementById('perkThreePercent').innerHTML = ccc;
@@ -462,8 +461,8 @@ document.getElementById('perkTwentyThreePercent').innerHTML = www;
 document.getElementById('perkTwentyFourPercent').innerHTML = xxx;
 document.getElementById('perkTwentyFivePercent').innerHTML = yyy;
 document.getElementById('perkTwentySixPercent').innerHTML = zzz;
-
 </script>
+
  <footer style='text-align: center'>
 THE HEADACHE COMMENCES
  </footer>
