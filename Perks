@@ -35,6 +35,159 @@ div.sticky {
  </style>
 </head>
 <body>
+<script>
+var perkName = [
+'Sturdy Energy',
+'Resilient',
+'Freedom',
+'Vigor',
+'Invigorated',
+'Refreshing',
+'Refreshing Ward',
+'Refreshing Evasion',
+'Indestructible',
+'Luck',
+'Physical Aversion',
+'Elemental Aversion',
+'Shirking Fortification',
+'Ancient Ward',
+'Angry Earth Ward',
+'Corrupted Ward',
+'Lost Ward',
+'Corruption Resistance',
+'Blight Resistance',
+'Sword n Shield Skill Perks',
+'Beast Ward',
+'Skill perks',
+'Logging Luck',
+'Harvesting Luck',
+'Mining Luck',
+'Skinning Luck'
+];
+
+var perkEffect = [
+'When blocking a hit while below 30% stamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)',
+'Critical hits deal 4.8% less damage to you.',
+'Slow, Stun, and Root expires 10% faster.',
+'Burn, Bleed, and Poison expires 10% faster.',
+'Weaken, Disease, Exhaust, and Rend expires 10% faster.',
+'Reduces max cooldowns by 2.8%.',
+'Reduces active cooldowns by 1.9% after being hit 4 times. Does not trigger off persistent damage, DoT effects or blocked attacks.',
+'Reduces active cooldowns by 0.74% after exiting the dodge animation.',
+'This item no longer loses durability.',
+'+2.8% chance at rare items from chests and monsters.',
+'You take 3.8% less damage from ranged physical attacks.',
+'You take 3.8% less damage from ranged elemental attacks.',
+'Dodging through an enemy attack grants fortify, increasing damage absorption by 3.8% for 6s. Each armor piece with this perk increases the potency of the effect.',
+'+4.8% Damage Absorption against Ancient Guardians.',
+'+4.8% Damage Absorption against Angry Earth.',
+'+4.8% Damage Absorption against Corrupted.',
+'+4.8% Damage Absorption against Lost.',
+'+15 Corruption Resistance. Also slows corruption damage.',
+'+15 Blight Resistance. Also slows blight damage.',
+'SnS Skill Perks have a Higher chance to roll because it is technically 2 weapons.',
+'+4.8% Damage Absorption against Beasts.',
+'Every other Weapon Skill Perk without SnS',
+'While Logging gain 5% chance at finding rare items.',
+'While Harvesting gain 5% chance at finding rare items.',
+'While Mining gain 5% chance at finding rare items.',
+'While Skinning gain 5% chance at finding rare items.',
+];
+
+var perkPercent = [
+14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .23, .21, .04, .04, .04, .04
+];
+//perkName var
+/*var a = perkName[0];
+var b = perkName[1];
+var c = perkName[2];
+var d = perkName[3];
+var e = perkName[4];
+var f = perkName[5];
+var g = perkName[6];
+var h = perkName[7];
+var i = perkName[8];
+var j = perkName[9];
+var k = perkName[10];
+var l = perkName[11];
+var m = perkName[12];
+var n = perkName[13];
+var o = perkName[14];
+var p = perkName[15];
+var q = perkName[16];
+var r = perkName[17];
+var s = perkName[18];
+var t = perkName[19];
+var u = perkName[20];
+var v = perkName[21];
+var w = perkName[22];
+var x = perkName[23];
+var y = perkName[24];
+var z = perkName[25];*/
+//perkEffect var
+var aa = perkEffect[0];
+var bb = perkEffect[1];
+var cc = perkEffect[2];
+var dd = perkEffect[3];
+var ee = perkEffect[4];
+var ff = perkEffect[5];
+var gg = perkEffect[6];
+var hh = perkEffect[7];
+var ii = perkEffect[8];
+var jj = perkEffect[9];
+var kk = perkEffect[10];
+var ll = perkEffect[11];
+var mm = perkEffect[12];
+var nn = perkEffect[13];
+var oo = perkEffect[14];
+var pp = perkEffect[15];
+var qq = perkEffect[16];
+var rr = perkEffect[17];
+var ss = perkEffect[18];
+var tt = perkEffect[19];
+var uu = perkEffect[20];
+var vv = perkEffect[21];
+var ww = perkEffect[22];
+var xx = perkEffect[23];
+var yy = perkEffect[24];
+var zz = perkEffect[25];
+//perkPercent var
+var aaa = perkPercent[0];
+var bbb = perkPercent[1];
+var ccc = perkPercent[2];
+var ddd = perkPercent[3];
+var eee = perkPercent[4];
+var fff = perkPercent[5];
+var ggg = perkPercent[6];
+var hhh = perkPercent[7];
+var iii = perkPercent[8];
+var jjj = perkPercent[9];
+var kkk = perkPercent[10];
+var lll = perkPercent[11];
+var mmm = perkPercent[12];
+var nnn = perkPercent[13];
+var ooo = perkPercent[14];
+var ppp = perkPercent[15];
+var qqq = perkPercent[16];
+var rrr = perkPercent[17];
+var sss = perkPercent[18];
+var ttt = perkPercent[19];
+var uuu = perkPercent[20];
+var vvv = perkPercent[21];
+var www = perkPercent[22];
+var xxx = perkPercent[23];
+var yyy = perkPercent[24];
+var zzz = perkPercent[25];
+
+//var test = perkName.slice(1, 26);
+
+var perkName = perkName.slice(1, 26);
+var perkEffect = perkEffect.slice(1, 26);
+var perkPercent = perkPercent.slice(1, 26);
+
+</script>
+
+<p id='demo'></p>
 
 <h2>
                                   Crafting Tool For Armor
@@ -55,11 +208,10 @@ Third Perk Selected </p>
     <th class='percent' style='width: 40px'>Craft %</th>
   </tr>
   <tr>
-    <td style='background-color: black'> <button onclick='removeOne(0)'>Select</button>
+    <td style='background-color: black'> <button onclick='x'>Select</button>
     <td id='perkOne'></td>
-    <td id='perkOneEffect' style='text-align: left; padding-left: 5px'>
-When blocking a hit while below tamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)</td>
-    <td id='perkOnePercent'>14.49%</td>
+    <td id='perkOneEffect' style='text-align: left; padding-left: 5px'></td>
+    <td id='perkOnePercent'></td>
   </tr>
   <tr>
     <td style='background-color: black'> <button type='button' onclick='removeTwo()'> Select </button>
@@ -237,183 +389,43 @@ While Skinning gain 5% chance at finding rare items.</td>
     <td id='perkTwentySixPercent' value='...'>.04%</td>
   </tr>
  </table>
-<script>
-const perkName = [
-'Sturdy Energy',
-'Resilient',
-'Freedom',
-'Vigor',
-'Invigorated',
-'Refreshing',
-'Refreshing Ward',
-'Refreshing Evasion',
-'Indestructible',
-'Luck',
-'Physical Aversion',
-'Elemental Aversion',
-'Shirking Fortification',
-'Ancient Ward',
-'Angry Earth Ward',
-'Corrupted Ward',
-'Lost Ward',
-'Corruption Resistance',
-'Blight Resistance',
-'Sword n Shield Skill Perks',
-'Beast Ward',
-'Skill perks',
-'Logging Luck',
-'Harvesting Luck',
-'Mining Luck',
-'Skinning Luck'
-];
-
-const perkEffect = [
-'When blocking a hit while below 30% stamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)',
-'Critical hits deal 4.8% less damage to you.',
-'Slow, Stun, and Root expires 10% faster.',
-'Burn, Bleed, and Poison expires 10% faster.',
-'Weaken, Disease, Exhaust, and Rend expires 10% faster.',
-'Reduces max cooldowns by 2.8%.',
-'Reduces active cooldowns by 1.9% after being hit 4 times. Does not trigger off persistent damage, DoT effects or blocked attacks.',
-'Reduces active cooldowns by 0.74% after exiting the dodge animation.',
-'This item no longer loses durability.',
-'+2.8% chance at rare items from chests and monsters.',
-'You take 3.8% less damage from ranged physical attacks.',
-'You take 3.8% less damage from ranged elemental attacks.',
-'Dodging through an enemy attack grants fortify, increasing damage absorption by 3.8% for 6s. Each armor piece with this perk increases the potency of the effect.',
-'+4.8% Damage Absorption against Ancient Guardians.',
-'+4.8% Damage Absorption against Angry Earth.',
-'+4.8% Damage Absorption against Corrupted.',
-'+4.8% Damage Absorption against Lost.',
-'+15 Corruption Resistance. Also slows corruption damage.',
-'+15 Blight Resistance. Also slows blight damage.',
-'SnS Skill Perks have a Higher chance to roll because it is technically 2 weapons.',
-'+4.8% Damage Absorption against Beasts.',
-'Every other Weapon Skill Perk without SnS',
-'While Logging gain 5% chance at finding rare items.',
-'While Harvesting gain 5% chance at finding rare items.',
-'While Mining gain 5% chance at finding rare items.',
-'While Skinning gain 5% chance at finding rare items.',
-];
-
-const perkPercent = [
-14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .23, .21, .04, .04, .04, .04
-];
-//perkName var
-var a = perkName[0];
-var b = perkName[1];
-var c = perkName[2];
-var d = perkName[3];
-var e = perkName[4];
-var f = perkName[5];
-var g = perkName[6];
-var h = perkName[7];
-var i = perkName[8];
-var j = perkName[9];
-var k = perkName[10];
-var l = perkName[11];
-var m = perkName[12];
-var n = perkName[13];
-var o = perkName[14];
-var p = perkName[15];
-var q = perkName[16];
-var r = perkName[17];
-var s = perkName[18];
-var t = perkName[19];
-var u = perkName[20];
-var v = perkName[21];
-var w = perkName[22];
-var x = perkName[23];
-var y = perkName[24];
-var z = perkName[25];
-//perkEffect var
-var aa = perkEffect[0];
-var bb = perkEffect[1];
-var cc = perkEffect[2];
-var dd = perkEffect[3];
-var ee = perkEffect[4];
-var ff = perkEffect[5];
-var gg = perkEffect[6];
-var hh = perkEffect[7];
-var ii = perkEffect[8];
-var jj = perkEffect[9];
-var kk = perkEffect[10];
-var ll = perkEffect[11];
-var mm = perkEffect[12];
-var nn = perkEffect[13];
-var oo = perkEffect[14];
-var pp = perkEffect[15];
-var qq = perkEffect[16];
-var rr = perkEffect[17];
-var ss = perkEffect[18];
-var tt = perkEffect[19];
-var uu = perkEffect[20];
-var vv = perkEffect[21];
-var ww = perkEffect[22];
-var xx = perkEffect[23];
-var yy = perkEffect[24];
-var zz = perkEffect[25];
-//perkPercent var
-var aaa = perkPercent[0];
-var bbb = perkPercent[1];
-var ccc = perkPercent[2];
-var ddd = perkPercent[3];
-var eee = perkPercent[4];
-var fff = perkPercent[5];
-var ggg = perkPercent[6];
-var hhh = perkPercent[7];
-var iii = perkPercent[8];
-var jjj = perkPercent[9];
-var kkk = perkPercent[10];
-var lll = perkPercent[11];
-var mmm = perkPercent[12];
-var nnn = perkPercent[13];
-var ooo = perkPercent[14];
-var ppp = perkPercent[15];
-var qqq = perkPercent[16];
-var rrr = perkPercent[17];
-var sss = perkPercent[18];
-var ttt = perkPercent[19];
-var uuu = perkPercent[20];
-var vvv = perkPercent[21];
-var www = perkPercent[22];
-var xxx = perkPercent[23];
-var yyy = perkPercent[24];
-var zzz = perkPercent[25];
-//perkName
-document.getElementById('perkOne').innerHTML = a;
-document.getElementById('perkTwo').innerHTML = b;
-document.getElementById('perkThree').innerHTML = c;
-document.getElementById('perkFour').innerHTML = d;
-document.getElementById('perkFive').innerHTML = e;
-document.getElementById('perkSix').innerHTML = f;
-document.getElementById('perkSeven').innerHTML = g;
-document.getElementById('perkEight').innerHTML = h;
-document.getElementById('perkNine').innerHTML = i;
-document.getElementById('perkTen').innerHTML = j;
-document.getElementById('perkEleven').innerHTML = k;
-document.getElementById('perkTwelve').innerHTML = l;
-document.getElementById('perkThirteen').innerHTML = m;
-document.getElementById('perkFourteen').innerHTML = n;
-document.getElementById('perkFifteen').innerHTML = o;
-document.getElementById('perkSixteen').innerHTML = p;
-document.getElementById('perkSeventeen').innerHTML = q;
-document.getElementById('perkEighteen').innerHTML = r;
-document.getElementById('perkNineteen').innerHTML = s;
-document.getElementById('perkTwenty').innerHTML = t;
-document.getElementById('perkTwentyOne').innerHTML = u;
-document.getElementById('perkTwentyTwo').innerHTML = v;
-document.getElementById('perkTwentyThree').innerHTML = w;
-document.getElementById('perkTwentyFour').innerHTML = x;
-document.getElementById('perkTwentyFive').innerHTML = y;
-document.getElementById('perkTwentySix').innerHTML = z;
+ <footer style='text-align: center'>
+THE HEADACHE COMMENCES
+ </footer>
+ <script>
+document.getElementById('perkOne').innerHTML = perkName[0];
+document.getElementById('perkTwo').innerHTML = perkName[1];
+document.getElementById('perkThree').innerHTML = perkName[2];
+document.getElementById('perkFour').innerHTML = perkName[3];
+document.getElementById('perkFive').innerHTML = perkName[4];
+document.getElementById('perkSix').innerHTML = perkName[5];
+document.getElementById('perkSeven').innerHTML = perkName[6];
+document.getElementById('perkEight').innerHTML = perkName[7];
+document.getElementById('perkNine').innerHTML = perkName[8];
+document.getElementById('perkTen').innerHTML = perkName[9];
+document.getElementById('perkEleven').innerHTML = perkName[10];
+document.getElementById('perkTwelve').innerHTML = perkName[11];
+document.getElementById('perkThirteen').innerHTML = perkName[12];
+document.getElementById('perkFourteen').innerHTML = perkName[13];
+document.getElementById('perkFifteen').innerHTML = perkName[14];
+document.getElementById('perkSixteen').innerHTML = perkName[15];
+document.getElementById('perkSeventeen').innerHTML = perkName[16];
+document.getElementById('perkEighteen').innerHTML = perkName[17];
+document.getElementById('perkNineteen').innerHTML = perkName[18];
+document.getElementById('perkTwenty').innerHTML = perkName[19];
+document.getElementById('perkTwentyOne').innerHTML = perkName[20];
+document.getElementById('perkTwentyTwo').innerHTML = perkName[21];
+document.getElementById('perkTwentyThree').innerHTML = perkName[22];
+document.getElementById('perkTwentyFour').innerHTML = perkName[23];
+document.getElementById('perkTwentyFive').innerHTML = perkName[24];
+document.getElementById('perkTwentySix').innerHTML = perkName[25];
 //perkEffect
-document.getElementById('perkOneEffect').innerHTML = aa;
-document.getElementById('perkTwoEffect').innerHTML = bb;
-document.getElementById('perkThreeEffect').innerHTML = cc;
-document.getElementById('perkFourEffect').innerHTML = dd;
-document.getElementById('perkFiveEffect').innerHTML = ee;
-document.getElementById('perkSixEffect').innerHTML = ff;
+document.getElementById('perkOneEffect').innerHTML = perkEffect[0];
+document.getElementById('perkTwoEffect').innerHTML = perkEffect[1];
+document.getElementById('perkThreeEffect').innerHTML = perkEffect[2];
+document.getElementById('perkFourEffect').innerHTML = perkEffect[3];
+document.getElementById('perkFiveEffect').innerHTML = perkEffect[4];
+document.getElementById('perkSixEffect').innerHTML = perkEffect[5];
 document.getElementById('perkSevenEffect').innerHTML = gg;
 document.getElementById('perkEightEffect').innerHTML = hh;
 document.getElementById('perkNineEffect').innerHTML = ii;
@@ -435,14 +447,14 @@ document.getElementById('perkTwentyFourEffect').innerHTML = xx;
 document.getElementById('perkTwentyFiveEffect').innerHTML = yy;
 document.getElementById('perkTwentySixEffect').innerHTML = zz;
 //perkPercent
-document.getElementById('perkOnePercent').innerHTML = aaa;
-document.getElementById('perkTwoPercent').innerHTML = bbb;
-document.getElementById('perkThreePercent').innerHTML = ccc;
-document.getElementById('perkFourPercent').innerHTML = ddd;
-document.getElementById('perkFivePercent').innerHTML = eee;
-document.getElementById('perkSixPercent').innerHTML = fff;
-document.getElementById('perkSevenPercent').innerHTML = ggg;
-document.getElementById('perkEightPercent').innerHTML = hhh;
+document.getElementById('perkOnePercent').innerHTML = perkPercent[0];
+document.getElementById('perkTwoPercent').innerHTML = perkPercent[1];
+document.getElementById('perkThreePercent').innerHTML = perkPercent[2];
+document.getElementById('perkFourPercent').innerHTML = perkPercent[3];
+document.getElementById('perkFivePercent').innerHTML = perkPercent[4];
+document.getElementById('perkSixPercent').innerHTML = perkPercent[5];
+document.getElementById('perkSevenPercent').innerHTML = perkPercent[6];
+document.getElementById('perkEightPercent').innerHTML = perkPercent[7];
 document.getElementById('perkNinePercent').innerHTML = iii;
 document.getElementById('perkTenPercent').innerHTML = jjj;
 document.getElementById('perkElevenPercent').innerHTML = kkk;
@@ -461,10 +473,9 @@ document.getElementById('perkTwentyThreePercent').innerHTML = www;
 document.getElementById('perkTwentyFourPercent').innerHTML = xxx;
 document.getElementById('perkTwentyFivePercent').innerHTML = yyy;
 document.getElementById('perkTwentySixPercent').innerHTML = zzz;
-</script>
 
- <footer style='text-align: center'>
-THE HEADACHE COMMENCES
- </footer>
+document.getElementById("demo").innerHTML = test;
+
+</script>
 </body>
 </html>
