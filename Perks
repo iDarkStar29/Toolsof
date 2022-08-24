@@ -97,94 +97,11 @@ var perkEffect = [
 var perkPercent = [
 14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .23, .21, .04, .04, .04, .04
 ];
-//perkName var
-/*var a = perkName[0];
-var b = perkName[1];
-var c = perkName[2];
-var d = perkName[3];
-var e = perkName[4];
-var f = perkName[5];
-var g = perkName[6];
-var h = perkName[7];
-var i = perkName[8];
-var j = perkName[9];
-var k = perkName[10];
-var l = perkName[11];
-var m = perkName[12];
-var n = perkName[13];
-var o = perkName[14];
-var p = perkName[15];
-var q = perkName[16];
-var r = perkName[17];
-var s = perkName[18];
-var t = perkName[19];
-var u = perkName[20];
-var v = perkName[21];
-var w = perkName[22];
-var x = perkName[23];
-var y = perkName[24];
-var z = perkName[25];*/
-//perkEffect var
-var aa = perkEffect[0];
-var bb = perkEffect[1];
-var cc = perkEffect[2];
-var dd = perkEffect[3];
-var ee = perkEffect[4];
-var ff = perkEffect[5];
-var gg = perkEffect[6];
-var hh = perkEffect[7];
-var ii = perkEffect[8];
-var jj = perkEffect[9];
-var kk = perkEffect[10];
-var ll = perkEffect[11];
-var mm = perkEffect[12];
-var nn = perkEffect[13];
-var oo = perkEffect[14];
-var pp = perkEffect[15];
-var qq = perkEffect[16];
-var rr = perkEffect[17];
-var ss = perkEffect[18];
-var tt = perkEffect[19];
-var uu = perkEffect[20];
-var vv = perkEffect[21];
-var ww = perkEffect[22];
-var xx = perkEffect[23];
-var yy = perkEffect[24];
-var zz = perkEffect[25];
-//perkPercent var
-var aaa = perkPercent[0];
-var bbb = perkPercent[1];
-var ccc = perkPercent[2];
-var ddd = perkPercent[3];
-var eee = perkPercent[4];
-var fff = perkPercent[5];
-var ggg = perkPercent[6];
-var hhh = perkPercent[7];
-var iii = perkPercent[8];
-var jjj = perkPercent[9];
-var kkk = perkPercent[10];
-var lll = perkPercent[11];
-var mmm = perkPercent[12];
-var nnn = perkPercent[13];
-var ooo = perkPercent[14];
-var ppp = perkPercent[15];
-var qqq = perkPercent[16];
-var rrr = perkPercent[17];
-var sss = perkPercent[18];
-var ttt = perkPercent[19];
-var uuu = perkPercent[20];
-var vvv = perkPercent[21];
-var www = perkPercent[22];
-var xxx = perkPercent[23];
-var yyy = perkPercent[24];
-var zzz = perkPercent[25];
-
-//var test = perkName.slice(1, 26);
-
+/*
 var perkName = perkName.slice(1, 26);
 var perkEffect = perkEffect.slice(1, 26);
-var perkPercent = perkPercent.slice(1, 26);
-
+var perkPercent = perkPercent.slice(1, 26);;
+ */
 </script>
 
 <p id='demo'></p>
@@ -200,6 +117,7 @@ Second Perk Selected </p>
 <p id='select3' style='text-align: center; background-color: lightgreen; border: solid 3px black; padding: 5px'>
 Third Perk Selected </p>
 </div>
+
 <table id='table1' style='background-color: lightgreen; padding: 5px'>
   <tr>
     <th style='width: 20px'> Click Box to Select Perk</th>
@@ -208,7 +126,7 @@ Third Perk Selected </p>
     <th class='percent' style='width: 40px'>Craft %</th>
   </tr>
   <tr>
-    <td style='background-color: black'> <button onclick='x'>Select</button>
+    <td style='background-color: black'> <button id='OneButton'onclick='removeOne()'>Select</button>
     <td id='perkOne'></td>
     <td id='perkOneEffect' style='text-align: left; padding-left: 5px'></td>
     <td id='perkOnePercent'></td>
@@ -426,26 +344,26 @@ document.getElementById('perkThreeEffect').innerHTML = perkEffect[2];
 document.getElementById('perkFourEffect').innerHTML = perkEffect[3];
 document.getElementById('perkFiveEffect').innerHTML = perkEffect[4];
 document.getElementById('perkSixEffect').innerHTML = perkEffect[5];
-document.getElementById('perkSevenEffect').innerHTML = gg;
-document.getElementById('perkEightEffect').innerHTML = hh;
-document.getElementById('perkNineEffect').innerHTML = ii;
-document.getElementById('perkTenEffect').innerHTML = jj;
-document.getElementById('perkElevenEffect').innerHTML = kk;
-document.getElementById('perkTwelveEffect').innerHTML = ll;
-document.getElementById('perkThirteenEffect').innerHTML = mm;
-document.getElementById('perkFourteenEffect').innerHTML = nn;
-document.getElementById('perkFifteenEffect').innerHTML = oo;
-document.getElementById('perkSixteenEffect').innerHTML = pp;
-document.getElementById('perkSeventeenEffect').innerHTML = qq;
-document.getElementById('perkEighteenEffect').innerHTML = rr;
-document.getElementById('perkNineteenEffect').innerHTML = ss;
-document.getElementById('perkTwentyEffect').innerHTML = tt;
-document.getElementById('perkTwentyOneEffect').innerHTML = uu;
-document.getElementById('perkTwentyTwoEffect').innerHTML = vv;
-document.getElementById('perkTwentyThreeEffect').innerHTML = ww;
-document.getElementById('perkTwentyFourEffect').innerHTML = xx;
-document.getElementById('perkTwentyFiveEffect').innerHTML = yy;
-document.getElementById('perkTwentySixEffect').innerHTML = zz;
+document.getElementById('perkSevenEffect').innerHTML = perkEffect[6];
+document.getElementById('perkEightEffect').innerHTML = perkEffect[7];
+document.getElementById('perkNineEffect').innerHTML = perkEffect[8];
+document.getElementById('perkTenEffect').innerHTML = perkEffect[9];
+document.getElementById('perkElevenEffect').innerHTML = perkEffect[10];
+document.getElementById('perkTwelveEffect').innerHTML = perkEffect[11];
+document.getElementById('perkThirteenEffect').innerHTML = perkEffect[12];
+document.getElementById('perkFourteenEffect').innerHTML = perkEffect[13];
+document.getElementById('perkFifteenEffect').innerHTML = perkEffect[14];
+document.getElementById('perkSixteenEffect').innerHTML = perkEffect[15];
+document.getElementById('perkSeventeenEffect').innerHTML = perkEffect[16];
+document.getElementById('perkEighteenEffect').innerHTML = perkEffect[17];
+document.getElementById('perkNineteenEffect').innerHTML = perkEffect[18];
+document.getElementById('perkTwentyEffect').innerHTML = perkEffect[19];
+document.getElementById('perkTwentyOneEffect').innerHTML = perkEffect[20];
+document.getElementById('perkTwentyTwoEffect').innerHTML = perkEffect[21];
+document.getElementById('perkTwentyThreeEffect').innerHTML = perkEffect[22];
+document.getElementById('perkTwentyFourEffect').innerHTML = perkEffect[23];
+document.getElementById('perkTwentyFiveEffect').innerHTML = perkEffect[24];
+document.getElementById('perkTwentySixEffect').innerHTML = perkEffect[25];
 //perkPercent
 document.getElementById('perkOnePercent').innerHTML = perkPercent[0];
 document.getElementById('perkTwoPercent').innerHTML = perkPercent[1];
@@ -455,24 +373,24 @@ document.getElementById('perkFivePercent').innerHTML = perkPercent[4];
 document.getElementById('perkSixPercent').innerHTML = perkPercent[5];
 document.getElementById('perkSevenPercent').innerHTML = perkPercent[6];
 document.getElementById('perkEightPercent').innerHTML = perkPercent[7];
-document.getElementById('perkNinePercent').innerHTML = iii;
-document.getElementById('perkTenPercent').innerHTML = jjj;
-document.getElementById('perkElevenPercent').innerHTML = kkk;
-document.getElementById('perkTwelvePercent').innerHTML = lll;
-document.getElementById('perkThirteenPercent').innerHTML = mmm;
-document.getElementById('perkFourteenPercent').innerHTML = nnn;
-document.getElementById('perkFifteenPercent').innerHTML = ooo;
-document.getElementById('perkSixteenPercent').innerHTML = ppp;
-document.getElementById('perkSeventeenPercent').innerHTML = qqq;
-document.getElementById('perkEighteenPercent').innerHTML = rrr;
-document.getElementById('perkNineteenPercent').innerHTML = sss;
-document.getElementById('perkTwentyPercent').innerHTML = ttt;
-document.getElementById('perkTwentyOnePercent').innerHTML = uuu;
-document.getElementById('perkTwentyTwoPercent').innerHTML = vvv;
-document.getElementById('perkTwentyThreePercent').innerHTML = www;
-document.getElementById('perkTwentyFourPercent').innerHTML = xxx;
-document.getElementById('perkTwentyFivePercent').innerHTML = yyy;
-document.getElementById('perkTwentySixPercent').innerHTML = zzz;
+document.getElementById('perkNinePercent').innerHTML = perkPercent[8];
+document.getElementById('perkTenPercent').innerHTML = perkPercent[9];
+document.getElementById('perkElevenPercent').innerHTML = perkPercent[10];
+document.getElementById('perkTwelvePercent').innerHTML = perkPercent[11];
+document.getElementById('perkThirteenPercent').innerHTML = perkPercent[12];
+document.getElementById('perkFourteenPercent').innerHTML = perkPercent[13];
+document.getElementById('perkFifteenPercent').innerHTML = perkPercent[14];
+document.getElementById('perkSixteenPercent').innerHTML = perkPercent[15];
+document.getElementById('perkSeventeenPercent').innerHTML = perkPercent[16];
+document.getElementById('perkEighteenPercent').innerHTML = perkPercent[17];
+document.getElementById('perkNineteenPercent').innerHTML = perkPercent[18];
+document.getElementById('perkTwentyPercent').innerHTML = perkPercent[19];
+document.getElementById('perkTwentyOnePercent').innerHTML = perkPercent[20];
+document.getElementById('perkTwentyTwoPercent').innerHTML = perkPercent[21];
+document.getElementById('perkTwentyThreePercent').innerHTML = perkPercent[22];
+document.getElementById('perkTwentyFourPercent').innerHTML = perkPercent[23];
+document.getElementById('perkTwentyFivePercent').innerHTML = perkPercent[24];
+document.getElementById('perkTwentySixPercent').innerHTML = perkPercent[25];
 
 document.getElementById("demo").innerHTML = test;
 
