@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+button {
+  height: 50px;
+  width: 80px;
+}
+input {
+  height: 40px;
+  text-align: center;
+  font-size: 30px;
+}
+body {
+  content-align: center;
+  background-color: grey;
+}
+h2 {
+  text-align: center;
+  border: 10px solid purple;
+  background-color: magenta;
+  font-size: 100px;
+}
+table {
+  border: 10px solid purple;
+  background-color: magenta;
+  border-collapse: collapse;
+}
+th, tr, td {
+  border: 4px solid purple;
+  height: 30px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  padding: 5px;
+}
+.title {
+  position: absolute;
+  padding: 10px;
+  height: 200px;
+  width: 1000px;
+  margin: -100px auto auto 150px;
+  
+}
+.table {
+  padding; 10px;
+  position: absolute;
+  margin: 200px auto auto auto;
+}
+</style>
+</head>
+<body>
+<div class='title'>
+<h2 id='demo'>Da WarBoard</h2>
+</div>
+    
+<div class='table'>
+<table id='myTable'>
+</table>
+</div>
+<script>
+/*
+const player = 
+{
+Name:'', 
+Score:'', 
+Kills:'', 
+Deaths:'', 
+Assists:'', 
+Healing: '', 
+Damage:''
+};
+*/
+
+     let txt = '';
+for (let i = 1; i < 51; i++) {
+txt +=
+"<tr>" + 
+"<td id=\'rank" +    i + "\'>" + i + "</td>" +
+"<td id=\'name" +    i + "\' style=\'width: 300px\'>" + "wtf" + "</td>" +
+"<td id=\'score" +   i + "\' style=\'width: 150px\'>" + "wtf" + "</td>" +
+"<td id=\'kills" +   i + "\' style=\'width: 50px\'>" + "wtf" + "</td>" +
+"<td id=\'deaths" +  i + "\' style=\'width: 50px\'>" + "wtf" + "</td>" +
+"<td id=\'assists" + i + "\' style=\'width: 50px\'>" + "wtf" + "</td>" +
+"<td id=\'healing" + i + "\' style=\'width: 150px\'>" + "wtf" + "</td>" +
+"<td id=\'damage" +  i + "\' style=\'width: 150px\'>" + "wtf" + "</td>" +
+"</tr>";
+};
+
+document.getElementById('myTable').innerHTML = 
+"<tr>" +
+"<th><button>Add</button></th>" + 
+"<th><input type='text' id='nameInput'    value='' style='width: 300px'></th>" +
+"<th><input type='number' id='scoreInput'   value='...' style='width: 150px'></th>" + 
+"<th><input type='number' id='killsInput'   value='...' style='width: 50px'></th>" + 
+"<th><input type='number' id='deathsInput'  value='...' style='width: 50px'></th>" + 
+"<th><input type='number' id='assistsInput' value='...' style='width: 50px'></th>" + 
+"<th><input type='number' id='healingInput' value='...' style='width: 150px'></th>" + 
+"<th><input type='number' id='damageInput'  value='...' style='width: 150px'></th>" + 
+'<tr>' +
+'<th>Rank</th>' + 
+'<th>Name</th>' + 
+'<th>Score</th>' + 
+'<th>Kills</th>' + 
+'<th>Deaths</th>' + 
+'<th>Assists</th>' + 
+'<th>Healing</th>' + 
+'<th>Damage</th>' + 
+'</tr>' + txt;
+
+const player = [];
+     const iName =    document.getElementById('nameInput').value;
+     const iScore =   document.getElementById('scoreInput').value;
+     const iKills =   document.getElementById('killsInput').value;
+     const iDeaths =  document.getElementById('deathsInput').value;
+     const iAssists = document.getElementById('assistsInput').value;
+     const iHealing = document.getElementById('healingInput').value;
+     const iDamage =  document.getElementById('damageInput').value;
+/*     
+     document.getElementById('demo').innerHTML = "fuck";
+
+<script>
+function total() {
+var A = document.getElementById("baseNumber").value;
+var B = document.getElementById("modifierNumber").value;
+  basestep3();
+}
+function step1(a, b) {
+  return Math.abs(a - b);
+}
+function step2(a, b) {
+  return Math.abs(a * b);
+}
+function step3(a, b) {
+  return Math.abs(a + b);
+}
+function basestep3() {
+  var A = document.getElementById("baseNumber").value;
+  var B = document.getElementById("modifierNumber").value;
+  var x = step1(1, A/100);
+  var y = step2(x, B/100);
+  var z = step3(A/100, y);
+document.getElementById("total").innerHTML = 'Total Damage Reduction = ' + z*100 + '%';
+}
+*/
+
+
+</script>
+
+</body>
+</html> 
