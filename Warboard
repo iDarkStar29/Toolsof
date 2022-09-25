@@ -60,20 +60,8 @@ th, tr, td {
 </table>
 </div>
 <script>
-/*
-const player = 
-{
-Name:'', 
-Score:'', 
-Kills:'', 
-Deaths:'', 
-Assists:'', 
-Healing: '', 
-Damage:''
-};
-*/
-
      let txt = '';
+     let players = '';
 for (let i = 1; i < 51; i++) {
 txt +=
 "<tr>" + 
@@ -86,12 +74,15 @@ txt +=
 "<td id=\'healing" + i + "\' style=\'width: 150px\'>" + "wtf" + "</td>" +
 "<td id=\'damage" +  i + "\' style=\'width: 150px\'>" + "wtf" + "</td>" +
 "</tr>";
+  let play = 'player' + i + ', ';
+ players += [play];
+
 };
 
 document.getElementById('myTable').innerHTML = 
 "<tr>" +
 "<th><button>Add</button></th>" + 
-"<th><input type='text' id='nameInput'    value='' style='width: 300px'></th>" +
+"<th><input type='text'   id='nameInput'    value='shit' style='width: 300px'></th>" +
 "<th><input type='number' id='scoreInput'   value='...' style='width: 150px'></th>" + 
 "<th><input type='number' id='killsInput'   value='...' style='width: 50px'></th>" + 
 "<th><input type='number' id='deathsInput'  value='...' style='width: 50px'></th>" + 
@@ -109,7 +100,6 @@ document.getElementById('myTable').innerHTML =
 '<th>Damage</th>' + 
 '</tr>' + txt;
 
-const player = [];
      const iName =    document.getElementById('nameInput').value;
      const iScore =   document.getElementById('scoreInput').value;
      const iKills =   document.getElementById('killsInput').value;
@@ -117,6 +107,12 @@ const player = [];
      const iAssists = document.getElementById('assistsInput').value;
      const iHealing = document.getElementById('healingInput').value;
      const iDamage =  document.getElementById('damageInput').value;
+     
+
+     document.getElementById('demo').innerHTML = typeof players;
+     document.getElementById('demo').innerHTML = players;
+     
+
 /*     
      document.getElementById('demo').innerHTML = "fuck";
 
