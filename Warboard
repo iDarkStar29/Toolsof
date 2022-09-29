@@ -60,29 +60,37 @@ th, tr, td {
 </table>
 </div>
 <script>
+const playerName = [];
+const playerScore = [];
+const playerKills = [];
+const playerDeaths = [];
+const playerAssists = [];
+const playerHealing = [];
+const playerDamage = [];
+
      let txt = '';
-     let players = '';
-for (let i = 1; i < 51; i++) {
+     let count = 0;
+     let board;
+for (let i = 0; i < 50; i++) {
+
+let j = i + 1;
 txt +=
 "<tr>" + 
-"<td id=\'rank" +    i + "\'>" + i + "</td>" +
-"<td id=\'name" +    i + "\' style=\'width: 300px\'>" + "wtf" + "</td>" +
-"<td id=\'score" +   i + "\' style=\'width: 150px\'>" + "wtf" + "</td>" +
-"<td id=\'kills" +   i + "\' style=\'width: 50px\'>" + "wtf" + "</td>" +
-"<td id=\'deaths" +  i + "\' style=\'width: 50px\'>" + "wtf" + "</td>" +
-"<td id=\'assists" + i + "\' style=\'width: 50px\'>" + "wtf" + "</td>" +
-"<td id=\'healing" + i + "\' style=\'width: 150px\'>" + "wtf" + "</td>" +
-"<td id=\'damage" +  i + "\' style=\'width: 150px\'>" + "wtf" + "</td>" +
+"<td id=\'rank" +    i + "\'>" + j + "</td>" +
+"<td id=\'name" +    i + "\' style=\'width: 300px\'>" + playerName[i] + "</td>" +
+"<td id=\'score" +   i + "\' style=\'width: 150px\'>" + playerScore[i] + "</td>" +
+"<td id=\'kills" +   i + "\' style=\'width: 50px\'>" + playerKills[i] + "</td>" +
+"<td id=\'deaths" +  i + "\' style=\'width: 50px\'>" + playerDeaths[i] + "</td>" +
+"<td id=\'assists" + i + "\' style=\'width: 50px\'>" + playerAssists[i] + "</td>" +
+"<td id=\'healing" + i + "\' style=\'width: 150px\'>" + playerHealing[i] + "</td>" +
+"<td id=\'damage" +  i + "\' style=\'width: 150px\'>" + playerDamage[i] + "</td>" +
 "</tr>";
-  let play = 'player' + i + ', ';
- players += [play];
-
 };
 
 document.getElementById('myTable').innerHTML = 
 "<tr>" +
-"<th><button>Add</button></th>" + 
-"<th><input type='text'   id='nameInput'    value='shit' style='width: 300px'></th>" +
+"<th><button id='myBtn'>Add</button></th>" + 
+"<th><input type='text'   id='nameInput'    value='' style='width: 300px'></th>" +
 "<th><input type='number' id='scoreInput'   value='...' style='width: 150px'></th>" + 
 "<th><input type='number' id='killsInput'   value='...' style='width: 50px'></th>" + 
 "<th><input type='number' id='deathsInput'  value='...' style='width: 50px'></th>" + 
@@ -100,22 +108,55 @@ document.getElementById('myTable').innerHTML =
 '<th>Damage</th>' + 
 '</tr>' + txt;
 
-     const iName =    document.getElementById('nameInput').value;
-     const iScore =   document.getElementById('scoreInput').value;
-     const iKills =   document.getElementById('killsInput').value;
-     const iDeaths =  document.getElementById('deathsInput').value;
+     const iName =       document.getElementById('nameInput').value;
+     const iScore =     document.getElementById('scoreInput').value;
+     const iKills =     document.getElementById('killsInput').value;
+     const iDeaths =   document.getElementById('deathsInput').value;
      const iAssists = document.getElementById('assistsInput').value;
      const iHealing = document.getElementById('healingInput').value;
-     const iDamage =  document.getElementById('damageInput').value;
+     const iDamage =   document.getElementById('damageInput').value;   
+     let name = 'name'
+     let score = 'score'
+     let kills = 'kills'
+     let deaths = 'deaths'
+     let assists = 'assists'
+     let healing = 'healing'
+     let damage = 'damage'
+
+     function add(count)
+{ 
+for (let i = 0; i < 50; i++) 
+  {
+  
+       if (count == i) {
+       playerName[i]    = iName;
+       playerScore[i]   = iScore;
+       playerKills[i]   = iKills;
+       playerDeaths[i]  = iDeaths;
+       playerAssists[i] = iAssists;
+       playerHealing[i] = iHealing;
+       playerDamage[i]  = iDamage;
+       
+       document.getElementById(  name    + i).innerHTML = playerName[i];
+       document.getElementById(  score   + i).innerHTML = playerScore[i];
+       document.getElementById(  kills   + i).innerHTML = playerKills[i];
+       document.getElementById(  deaths  + i).innerHTML = playerDeaths[i];
+       document.getElementById(  assists + i).innerHTML = playerAssists[i];
+       document.getElementById(  healing + i).innerHTML = playerHealing[i];
+       document.getElementById(  damage  + i).innerHTML = playerDamage[i];
+       document.getElementById('demo').innerHTML = 'i work';
+       count++;
+    };
+  }
+}
+
+     document.getElementById("myBtn").addEventListener("click", function() {
+  add(count);
+});
+     playerName[0] = 'shit';
+     document.getElementById('demo').innerHTML = playerName[0];
      
-
-     document.getElementById('demo').innerHTML = typeof players;
-     document.getElementById('demo').innerHTML = players;
-     
-
-/*     
-     document.getElementById('demo').innerHTML = "fuck";
-
+/*
 <script>
 function total() {
 var A = document.getElementById("baseNumber").value;
